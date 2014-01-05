@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.homepage    = "http://humanwebdevelopment.com"
   s.summary     = "Spree plugin to display and manage Slideshow content."
   s.description = "Spree plugin to display and manage Slideshow content."
-
+  s.require_paths = ["app/views"]
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
 
