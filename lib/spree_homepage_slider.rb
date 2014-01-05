@@ -1,0 +1,2 @@
+module SpreeHomepageSlider
+end
