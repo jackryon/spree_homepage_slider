@@ -1,0 +1,26 @@
+<%= f.field_container :name do %>
+  <%= f.label :name %><br />
+  <%= f.text_field :name %>
+<% end %>
+<%= f.field_container :description do %>
+  <%= f.label :description %><br />
+  <%= f.text_field :description %>
+<% end %>
+<%= f.field_container :link_url do %>
+  <label>Link URL</label><br />
+  <%= f.text_field :link_url %>
+<% end %>
+<%= f.field_container :image do %>
+  <%= f.label :image %> <i>(<%= t('spree_slider.image_tip') %>)</i><br />
+  <%= f.file_field :image %>
+<% end %>
+<%= f.field_container :published do %>
+  <%= f.check_box :published %>
+  <%= f.label :published %>
+<% end %>
+<%= f.field_container :position do %>
+  <%= f.label :position %>
+  <%= f.number_field :position %>
+<% end %>
+
+

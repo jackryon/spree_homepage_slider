@@ -1,0 +1,36 @@
+<%= render :partial => 'spree/admin/shared/configuration_menu' %>
+
+<div class="toolbar" data-hook="toolbar">
+  <ul class="actions no_list_decoration">
+    <li>
+      <p><%= button_link_to "New Featured Slide", 
+        new_object_url, :icon => 'add', :id => 'admin_new_featured_slide_link' %></p>
+    </li>
+  </ul>
+  <br class="clear" />
+</div>
+
+<h1>Featured Slides</h1>
+
+<table class="index" id="listing_featured_slides" data-hook>
+  <thead>
+    <tr data-hook="admin_featured_slides_index_headers">
+      <th>Name</th>
+      <th>Description</th>
+      <th data-hook="admin_slides_index_header_actions"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @featured_slides.each do |f_slide|%>
+      <tr id="<%= dom_id f_slide %>" data-hook="admin_featured_slides_index_rows">
+        <td><%=link_to f_slide.name, object_url(f_slide) %></td>
+        <td><%=link_to f_slide.description, object_url(f_slide) %></td>
+        <td data-hook="admin_slides_index_row_actions">
+          <%= link_to_edit f_slide, :class => 'edit' %>
+          <br>
+          <%= link_to_delete f_slide %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
