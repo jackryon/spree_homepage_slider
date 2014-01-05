@@ -1,0 +1,22 @@
+<% slides = Spree::FeaturedSlide.published.order('position ASC') %>
+
+
+<div class="flexslider">
+  <ul class="slides">
+    <% slides.each do |s| %>
+      <li>
+        <a href="<%= s.link_url %>">
+          <img src="<%= s.image.url %>">
+        </a>  
+        <div class="featured_slide_name">
+          <a href="<%= s.link_url %>"><%= s.name %></a>
+        </div>
+        <div class="hr_centerer"><hr></div>
+        <div class="featured_slide_description">
+          <%= s.description %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
